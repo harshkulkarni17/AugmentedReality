@@ -7,7 +7,6 @@
     tools:context=".homescreen">
 
 
-
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/bg"

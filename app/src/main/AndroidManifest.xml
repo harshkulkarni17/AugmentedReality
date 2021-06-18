@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+    <uses-feature
         android:name="android.hardware.Camera.ar"
         android:required="true" />
 
@@ -15,7 +18,14 @@
         android:roundIcon="@drawable/ar_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".engine"></activity>
+        <activity android:name=".splashscreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".engine" />
         <activity android:name=".battery" />
         <activity android:name=".Satelite" />
         <activity android:name=".bot_drone" />
@@ -26,15 +36,8 @@
         <activity android:name=".robotic_arm" />
         <activity android:name=".hills" />
         <activity android:name=".wolf" />
-        <activity android:name=".homescreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity" />
-
+        <activity android:name=".homescreen"/>
+        <activity android:name=".MainActivity"/>
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
